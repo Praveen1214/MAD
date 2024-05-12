@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CalendarDayText">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+        <!-- Add any additional styling you want for the day letters -->
+    </style>
+
+    <style name="CalendarDateText">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body2</item>
+        <!-- Add any additional styling you want for the date numbers -->
+    </style>
+
+    <style name="para_primar">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#006EE9</item>
+    </style>
+
+    <style name="track_your_">
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">#1D1D1D</item>
+    </style>
+
+    <style name="versatile_t">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#1D1D1D</item>
+    </style>
+
+    <style name="problem_sol">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="cryptograph">
+        <item name="android:textSize">10sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="user_friend">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#1D1D1D</item>
+    </style>
+
+    <style name="find_your_r">
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">#1D1D1D</item>
+    </style>
+
+    <style name="create_acco">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="login">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <string name="login">Login</string>
+    <style name="email">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#00004D</item>
+    </style>
+
+    <style name="password">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#00004D</item>
+    </style>
+
+    <style name="find_your_c">
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">#1D1D1D</item>
+    </style>
+
+    <style name="platform_ta">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#1D1D1D</item>
+    </style>
+
+    <style name="name">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#0F172A</item>
+    </style>
+
+    <style name="input_label">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#0F172A</item>
+    </style>
+
+    <style name="input_label2">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#0F172A</item>
+    </style>
+
+    <style name="date_of_bir">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#0F172A</item>
+    </style>
+
+    <style name="input_birthday">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#0F172A</item>
+    </style>
+
+    <style name="phone_numbe">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#0F172A</item>
+    </style>
+
+    <style name="input_labelnum">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#0F172A</item>
+    </style>
+
+    <style name="student_id">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#0F172A</item>
+    </style>
+
+    <style name="label_disab">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#64748B</item>
+    </style>
+
+    <style name="gender">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#0F172A</item>
+    </style>
+
+    <style name="addressn">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#0F172A</item>
+    </style>
+
+
+    <style name="sunrise_roa">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#0F172A</item>
+    </style>
+
+    <style name="button_larg">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="button_large">
+    <item name="android:textSize">17sp</item>
+    <item name="android:textColor">#FFFFFF</item>
+</style>
+</resources>
+
+

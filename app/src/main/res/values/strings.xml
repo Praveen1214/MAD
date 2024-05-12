@@ -1,0 +1,175 @@
+<resources>
+    <string name="app_name">BoxTime</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_your_email">Enter Your Email .....</string>
+    <string name="enter_your_pass">Enter Your Password .....</string>
+    <string name="re_enter_your_pass">Re-enter Your Password .....</string>
+    <string name="type_your_task">Type your task .....</string>
+    <string name="copy_right">\@2024  Box Time</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="versatile_tool_designed_to_help_individuals_monitor_and_evaluate_their_advancement_in_various_aspects_of_life_such_as_personal_goals_fitness_routines_educational_milestones_or_professional_development">versatile tool designed to help individuals monitor and evaluate their advancement in various aspects of life, such as personal goals, fitness routines, educational milestones, or professional development.</string>
+    <string name="track_your_progress">Track Your Progress</string>
+    <string name="user_friendly_web_application_designed_to_help_users_discover_their_relative_position_or_ranking_within_a_specific_context_such_as_academic_performance_professional_achievements_or_social_influence">user-friendly web application designed to help users discover their relative position or ranking within a specific context, such as academic performance, professional achievements, or social influence.</string>
+    <string name="find_your_rank">Find Your Rank</string>
+    <string name="user_friendly_web_application_designed_to_help_users_discover_the_relative_position_or_ranking_within_a_specific_context_such_as_academic_performance_professional_achievements_or_social_influence">user_friendly_web_application_designed_to_help_users_discover_the_relative_position_or_ranking_within_a_specific_context_such_as_academic_performance_professional_achievements_or_social_influence</string>
+    <string name="Next">Next</string>
+    <string name="todo">TODO</string>
+    <string name="ne0xt">Next</string>
+    <string name="todo1">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="hi_welcome_back">Hi, Welcome Back! 👋</string>
+    <string name="hello_again_you_ve_been_missed">Hello again, you’ve been missed!</string>
+    <string name="sign_in">Sign In</string>
+    <string name="already_registered">Already Registered !!</string>
+    <string name="para_primar">skip</string>
+    <string name="track_your_">Track Your Progress</string>
+    <string name="versatile_t">
+versatile tool designed to help individuals monitor and evaluate their advancement in various aspects of life, such as personal goals, fitness routines, educational milestones, or professional development.
+</string>
+    <string name="todo3">TODO</string>
+    <string name="submission_task1">Submission Task</string>
+    <string name="todo33">TODO</string>
+    <string name="itunuoluwa_abidoye">Itunuoluwa Abidoye</string>
+    <string name="id_87654">ID - #87654</string>
+    <string name="todo25">TODO</string>
+    <string name="todo12">TODO</string>
+    <string name="problem_sol">Problem Solving</string>
+    <string name="cryptograph">Cryptography and Network Security</string>
+    <string name="user_friend">
+user-friendly web application designed to help users discover their relative position or ranking within a specific context, such as academic performance, professional achievements, or social influence.
+</string>
+    <string name="find_your_r">Find Your Rank</string>
+    <string name="create_acco">Next</string>
+    <string name="signup">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="find_your_c">Find Your Class Notes</string>
+    <string name="platform_ta">platform tailored for students to easily locate and access their course materials. With organized categories or search functionalities, users can swiftly navigate through lecture notes, presentations, study guides, and supplementary .</string>
+    <string name="home">home</string>
+    <string name="note">note</string>
+    <string name="lead">lead</string>
+    <string name="profile">profile</string>
+    <string name="name">Name</string>
+    <string name="input_label">Marvin McKinney</string>
+    <string name="input_label2">marvin@email.com</string>
+    <string name="date_of_bir">Date of birth</string>
+    <string name="input_birthday">11/08/1997</string>
+    <string name="phone_numbe">Number</string>
+    <string name="phone_number">Phone_number</string>
+    <string name="input_labelnum">702-889-5347</string>
+    <string name="student_id">Student ID</string>
+    <string name="label_disab">#87654</string>
+    <string name="gender">Gender</string>
+    <string name="address">Address</string>
+    <string name="sunrise_roa">1106 Sunrise Road Las Vegas, NV 89102</string>
+    <string name="button_larg">Update Profile</string>
+    <string name="button_large">Logout</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="profiles">Profile</string>
+    <string name="notes">Notes</string>
+    <string name="back">#0000</string>
+    <string name="favourites">Favourites</string>
+    <string name="search">Search</string>
+    <string name="more_options">More Options</string>
+    <string name="Lead_Board">Lead Board</string>
+    <string name="UI">UI</string>
+    <string name="pogress_txt">pogress_txt</string>
+    <string name="pogress">pogress</string>
+    <string name="EditaPicture">Edit a \nPicture</string>
+    <string name="progress">progress</string>
+    <string name="Hello">Hello</string>
+    <string name="dileepa_praveen">Dileepa Praveen</string>
+    <string name="hello_dileepa">Hello,Dileepa</string>
+</resources>
