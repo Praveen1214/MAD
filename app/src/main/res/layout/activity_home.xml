@@ -33,123 +33,6 @@
 
     <!-- calendar -->
 
-    <RelativeLayout
-        android:id="@+id/assignment"
-        android:layout_width="wrap_content"
-        android:layout_height="72dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="35dp"
-        android:background="@drawable/component_9"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.952">
-
-        <View
-            android:id="@+id/ellipse_6"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:background="#79E0EE" />
-
-        <TextView
-            android:id="@+id/problem_sol1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="11dp"
-            android:gravity="top"
-            android:text="@string/problem_sol"
-            android:textAppearance="@style/problem_sol"
-            android:textColor="@color/text_color"
-            android:textSize="19sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/cryptograph1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
-            android:gravity="top"
-            android:text="@string/cryptograph"
-            android:textAppearance="@style/cryptograph"
-            android:textSize="14sp" />
-
-        <CheckBox
-            android:id="@+id/checkBox4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="300dp"
-            android:layout_marginTop="15dp" />
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/assignment1"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/component_9"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomNavigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.733"
-        tools:ignore="UnknownId">
-
-        <CheckBox
-            android:id="@+id/checkBox3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="300dp"
-            android:layout_marginTop="15dp" />
-
-        <View
-            android:id="@+id/ellipse_7"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:background="#79E0EE" />
-
-        <TextView
-            android:id="@+id/problem_sol2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="11dp"
-            android:gravity="top"
-            android:text="@string/problem_sol"
-            android:textAppearance="@style/problem_sol"
-            android:textColor="@color/text_color"
-            android:textSize="19sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/cryptograph2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
-            android:gravity="top"
-            android:text="@string/cryptograph"
-            android:textAppearance="@style/cryptograph"
-            android:textSize="14sp" />
-
-
-    </RelativeLayout>
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -197,16 +80,18 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
-                android:contentDescription="@string/todo33"
-                android:src="@drawable/search"
-                tools:ignore="ImageContrastCheck,DuplicateSpeakableTextCheck"
-                tools:src="@drawable/search" />
+            <ImageView
+                android:id="@+id/sortImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_sort" />
+
+            <ImageView
+                android:id="@+id/listOrGridImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_view_list"
+                app:tint="@color/black" />
         </LinearLayout>
 
 
@@ -224,550 +109,50 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="wrap_content"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/taskRV"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="20dp"
-        android:background="#3F51B5"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/assignment_01"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_below="@id/edSearchL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="10dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:paddingBottom="100dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.357" />
 
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <RelativeLayout
-
-        android:id="@+id/assignment_01"
-        android:layout_width="wrap_content"
-        android:layout_height="72dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="4dp"
-        android:background="@drawable/component_9"
-        app:layout_constraintBottom_toTopOf="@+id/assignment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.807"
-        tools:ignore="RtlHardcoded">
-
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="300dp"
-            android:layout_marginTop="15dp"
-            tools:ignore="DuplicateSpeakableTextCheck" />
-
-        <View
-            android:id="@+id/ellipse_5"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:background="#79E0EE" />
-
-        <TextView
-            android:id="@+id/problem_sol"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="11dp"
-            android:gravity="top"
-            android:text="@string/problem_sol"
-            android:textAppearance="@style/problem_sol"
-            android:textColor="@color/text_color"
-            android:textSize="19sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/cryptograph"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
-            android:gravity="top"
-            android:text="@string/cryptograph"
-            android:textAppearance="@style/cryptograph"
-            android:textSize="14sp" />
-
-
-    </RelativeLayout>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="385dp"
-        android:layout_height="70dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edSearchL"
+        style="@style/SearchInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="10dp"
+        app:errorEnabled="false"
+        app:hintEnabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.111"
-        app:srcCompat="@drawable/calendar" />
+        app:layout_constraintVertical_bias="0.100000024"
+        tools:ignore="MissingConstraints">
 
-    <HorizontalScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fillViewport="true"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomNavigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"
-        tools:ignore="UnknownId">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="Enter search title"
+            android:imeOptions="actionSearch"
+            android:inputType="text" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/menupurrple"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="285dp">
-
-                <TextView
-                    android:id="@+id/textView25"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="20 days"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="60dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:fontFamily="sans-serif"
-                        android:gravity="center_vertical"
-                        android:text="Programming"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/textView24"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="40dp"
-                    android:text="@string/progress"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-                <ProgressBar
-                    style="@android:style/Widget.ProgressBar.Horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:accessibilityHeading="false"
-                    android:indeterminateBehavior="cycle"
-                    android:progress="30"
-                    android:progressBackgroundTint="@color/bar_bg"
-                    android:progressTint="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:text="30%"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/menured"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="285dp">
-
-                <TextView
-                    android:id="@+id/textView32"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="25 days"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="60dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="74dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:fontFamily="sans-serif"
-                        android:gravity="center_vertical"
-                        android:text="@string/EditaPicture"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/textView22"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="23dp"
-                    android:text="@string/progress"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-                <ProgressBar
-                    style="@android:style/Widget.ProgressBar.Horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:accessibilityHeading="false"
-                    android:indeterminateBehavior="cycle"
-                    android:progress="20"
-                    android:progressBackgroundTint="@color/bar_bg"
-                    android:progressTint="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:text="20%"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:background="@drawable/menugreen"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="285dp">
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="25 days"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="60dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:fontFamily="sans-serif"
-                        android:gravity="center_vertical"
-                        android:text="WritingBook"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/textView20"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="40dp"
-                    android:text="@string/progress"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-                <ProgressBar
-                    style="@android:style/Widget.ProgressBar.Horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginTop="0dp"
-                    android:accessibilityHeading="false"
-                    android:indeterminateBehavior="cycle"
-                    android:progress="10"
-                    android:progressBackgroundTint="@color/bar_bg"
-                    android:progressTint="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:text="10%"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/menublue"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="285dp">
-
-                <TextView
-                    android:id="@+id/textView19"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="10 days"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="60dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:fontFamily="sans-serif"
-                        android:gravity="center_vertical"
-                        android:text="@string/UI"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="40dp"
-                    android:text="@string/progress"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-                <ProgressBar
-                    style="@android:style/Widget.ProgressBar.Horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:accessibilityHeading="false"
-                    android:indeterminateBehavior="cycle"
-                    android:progress="40"
-                    android:progressBackgroundTint="@color/bar_bg"
-                    android:progressTint="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:text="45%"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/menupurrple"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="285dp">
-
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="10 days"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="60dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:fontFamily="sans-serif"
-                        android:gravity="center_vertical"
-                        android:text="@string/UI"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="40dp"
-                    android:text="@string/progress"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-                <ProgressBar
-                    style="@android:style/Widget.ProgressBar.Horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:accessibilityHeading="false"
-                    android:indeterminateBehavior="cycle"
-                    android:progress="40"
-                    android:progressBackgroundTint="@color/bar_bg"
-                    android:progressTint="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:text="45%"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/menured"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="285dp">
-
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="10 days"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="60dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:fontFamily="sans-serif"
-                        android:gravity="center_vertical"
-                        android:text="@string/UI"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="40dp"
-                    android:text="@string/pogress"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-                <ProgressBar
-                    style="@android:style/Widget.ProgressBar.Horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:accessibilityHeading="false"
-                    android:indeterminateBehavior="cycle"
-                    android:progress="40"
-                    android:progressBackgroundTint="@color/bar_bg"
-                    android:progressTint="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:text="45%"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-
-            </LinearLayout>
-        </LinearLayout>
-
-
-    </HorizontalScrollView>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/textView"
@@ -784,8 +169,32 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.307"
         tools:ignore="MissingConstraints" />
 
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addTaskFABtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/black"
+        android:text="Add Task"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:iconSize="25dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.889" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
