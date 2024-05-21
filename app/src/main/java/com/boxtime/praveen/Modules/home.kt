@@ -40,35 +40,31 @@ import kotlinx.coroutines.launch
 
 class home : AppCompatActivity() {
 
-
-    private val taskViewModel: TaskViewModel by lazy {
-        ViewModelProvider(this)[TaskViewModel::class.java]
-    }
-
-    private val updateTaskDialog: Dialog by lazy {
-        Dialog(this, R.style.DialogCustomTheme).apply {
-            setupDialog(R.layout.update_task_dialog)
-        }
-    }
-
-    private val addTaskDialog: Dialog by lazy {
-        Dialog(this, R.style.DialogCustomTheme).apply {
-            setupDialog(R.layout.add_task_dialog)
-        }
-    }
-
-
+    private lateinit var addTaskDialog: Dialog
+    private lateinit var updateTaskDialog: Dialog
+    private lateinit var loadingDialog: Dialog
+    private lateinit var taskViewModel: TaskViewModel
     private val isListMutableLiveData = MutableLiveData<Boolean>().apply {
         postValue(true)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val addTaskFABtn: ExtendedFloatingActionButton = findViewById(R.id.addTaskFABtn)
-        addTaskFABtn.setOnClickListener {
-            showAddTaskDialog()
+        addTaskDialog = Dialog(this, R.style.DialogCustomTheme).apply {
+            setupDialog(R.layout.add_task_dialog)
         }
+
+        updateTaskDialog = Dialog(this, R.style.DialogCustomTheme).apply {
+            setupDialog(R.layout.update_task_dialog)
+        }
+
+        loadingDialog = Dialog(this, R.style.DialogCustomTheme).apply {
+            setupDialog(R.layout.loading_dialog)
+        }
+
+        taskViewModel = ViewModelProvider(this)[TaskViewModel::class.java]
 
         // Add task start
         val addCloseImg = addTaskDialog.findViewById<ImageView>(R.id.closeImg)
@@ -83,7 +79,6 @@ class home : AppCompatActivity() {
             override fun afterTextChanged(s: Editable) {
                 validateEditText(addETTitle, addETTitleL)
             }
-
         })
 
         val addETDesc = addTaskDialog.findViewById<TextInputEditText>(R.id.edTaskDesc)
@@ -99,9 +94,7 @@ class home : AppCompatActivity() {
 
         val saveTaskBtn = addTaskDialog.findViewById<Button>(R.id.saveTaskBtn)
         saveTaskBtn.setOnClickListener {
-            if (validateEditText(addETTitle, addETTitleL)
-                && validateEditText(addETDesc, addETDescL)
-            ) {
+            if (validateEditText(addETTitle, addETTitleL) && validateEditText(addETDesc, addETDescL)) {
                 val newTask = Task(
                     UUID.randomUUID().toString(),
                     addETTitle.text.toString().trim(),
@@ -113,8 +106,7 @@ class home : AppCompatActivity() {
                 taskViewModel.insertTask(newTask)
             }
         }
-
-
+        // Add task end
 
         // Update Task Start
         val updateETTitle = updateTaskDialog.findViewById<TextInputEditText>(R.id.edTaskTitle)
@@ -143,18 +135,19 @@ class home : AppCompatActivity() {
         updateCloseImg.setOnClickListener { updateTaskDialog.dismiss() }
 
         val updateTaskBtn = updateTaskDialog.findViewById<Button>(R.id.updateTaskBtn)
+        // Update Task End
 
         // Update Task End
 
         isListMutableLiveData.observe(this){
             if (it){
                 mainBinding.taskRV.layoutManager = LinearLayoutManager(
-                    this, LinearLayoutManager.VERTICAL,false
+                    this,LinearLayoutManager.VERTICAL,false
                 )
                 mainBinding.listOrGridImg.setImageResource(R.drawable.ic_view_module)
             }else{
                 mainBinding.taskRV.layoutManager = StaggeredGridLayoutManager(
-                    2, LinearLayoutManager.VERTICAL
+                    2,LinearLayoutManager.VERTICAL
                 )
                 mainBinding.listOrGridImg.setImageResource(R.drawable.ic_view_list)
             }
@@ -358,77 +351,4 @@ class home : AppCompatActivity() {
                 }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        val bottomNavigation : BottomNavigationView = findViewById(R.id.bottomNavigation)
-
-        bottomNavigation.selectedItemId = R.id.home
-
-        bottomNavigation.setOnNavigationItemSelectedListener { item ->
-
-            when (item.itemId) {
-                R.id.home -> {
-                    true
-                }
-                R.id.note -> {
-                    val intent = Intent(this, note::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.lead -> {
-                    val intent = Intent(this, leader_board::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.profile -> {
-                    val intent = Intent(this, profile::class.java)
-                    startActivity(intent)
-                    true
-                }
-                else -> false
-            }
-        }
-
-
-
-
-    }
-    private fun showAddTaskDialog() {
-        val dialog = Dialog(this)
-        dialog.setContentView(R.layout.add_task_dialog)
-
-        val closeImg: ImageView = dialog.findViewById(R.id.closeImg)
-        val saveTaskBtn: Button = dialog.findViewById(R.id.saveTaskBtn)
-
-        closeImg.setOnClickListener {
-            dialog.dismiss()
-        }
-
-        saveTaskBtn.setOnClickListener {
-            // Handle save task button click
-            dialog.dismiss()
-        }
-
-        dialog.show()
-    }
-
-
 }

@@ -38,7 +38,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="80dp"
         android:layout_marginBottom="36dp"
-        android:background="@drawable/component_9"
+
         app:layout_constraintBottom_toTopOf="@+id/assignment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
